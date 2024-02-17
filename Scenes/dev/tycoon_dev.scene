@@ -1,0 +1,292 @@
+{
+  "Id": "8b503d57-b9f4-44cb-a8b6-d7e3e75e8226",
+  "GameObjects": [
+    {
+      "Id": "5f7b338e-300a-4b0c-9b71-46fd45f52d46",
+      "Name": "Main Camera",
+      "Position": "14.85996,0.00001141379,564.1121",
+      "Rotation": "-0.7071068,-0.00000003090862,0.7071068,-0.00000003090862",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "CameraComponent",
+          "BackgroundColor": "0.33333,0.46275,0.52157,1",
+          "ClearFlags": "All",
+          "FieldOfView": 94.53,
+          "IsMainCamera": true,
+          "Orthographic": false,
+          "OrthographicHeight": 700,
+          "Priority": 1,
+          "RenderExcludeTags": "",
+          "RenderTags": "",
+          "TargetEye": "None",
+          "Viewport": "0,0,1,1",
+          "ZFar": 10000,
+          "ZNear": 10
+        },
+        {
+          "__type": "CameraController",
+          "MoveSpeed": 1000
+        }
+      ]
+    },
+    {
+      "Id": "d5a62ba6-46bd-45d2-b37c-41542e27f1e0",
+      "Name": "Directional Light",
+      "Position": "0,0,200",
+      "Rotation": "-0.2459842,0.5938582,0.2931525,0.7077327",
+      "Tags": "light_directional,light",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "DirectionalLight",
+          "FogMode": "Enabled",
+          "FogStrength": 1,
+          "LightColor": "0.91373,0.98039,1,1",
+          "Shadows": true,
+          "SkyColor": "0.05882,0.07451,0.08235,1"
+        }
+      ]
+    },
+    {
+      "Id": "115a425d-7f07-4107-a4a8-a1b8ff226706",
+      "Name": "Skybox",
+      "Position": "470.0854,-16.09777,312.3539",
+      "Tags": "skybox",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "SkyBox2D",
+          "SkyMaterial": "materials/skybox/light_test_sky_sunny02.vmat",
+          "Tint": "1,1,1,1"
+        }
+      ]
+    },
+    {
+      "Id": "ff0ff50d-94b4-4509-80ae-8b291fd956f5",
+      "Name": "Plane",
+      "Scale": "8,8,1",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "ModelRenderer",
+          "BodyGroups": 18446744073709551615,
+          "MaterialGroup": null,
+          "MaterialOverride": "materials/grass/floor_grass_a.vmat",
+          "Model": "models/dev/plane.vmdl",
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        },
+        {
+          "__type": "PlaneCollider",
+          "Center": "0,0,0",
+          "IsTrigger": false,
+          "Scale": "100,100",
+          "Static": true,
+          "Surface": "surfaces/concrete.surface"
+        }
+      ]
+    },
+    {
+      "Id": "c641427f-4c2a-4687-8501-f691374c2bc7",
+      "Name": "HUD",
+      "Position": "370.3558,715.4297,526.3963",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "ScreenPanel",
+          "AutoScreenScale": true,
+          "Opacity": 1,
+          "Scale": 1,
+          "ZIndex": 100
+        },
+        {
+          "__type": "RootUI"
+        }
+      ]
+    },
+    {
+      "Id": "ebe7f45b-fb56-4387-b2cd-803fad1b316d",
+      "Name": "GameManager",
+      "Position": "370.3558,715.4297,526.3963",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "GameManager"
+        }
+      ]
+    },
+    {
+      "Id": "aba3b5d5-7e51-4751-b0d7-0f67630b568e",
+      "Name": "Conveyor",
+      "Position": "0,0,6.625464",
+      "Rotation": "0,0,0.7071067,0.7071068",
+      "Scale": "11.34438,13.15923,0.2982036",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "ModelRenderer",
+          "BodyGroups": 18446744073709551615,
+          "MaterialGroup": null,
+          "MaterialOverride": null,
+          "Model": "models/dev/box.vmdl",
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        },
+        {
+          "__type": "BoxCollider",
+          "Center": "0,0,0",
+          "IsTrigger": false,
+          "Scale": "50,50,50",
+          "Static": false,
+          "Surface": null
+        },
+        {
+          "__type": "ConveyorBelt",
+          "Direction": "Left",
+          "Speed": 3
+        }
+      ]
+    },
+    {
+      "Id": "35348548-5ac0-44ba-ab9b-80d196188740",
+      "Name": "Conveyor (3)",
+      "Position": "-175.9214,156.8117,6.625464",
+      "Scale": "6.120288,5.27125,0.7027502",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "ModelRenderer",
+          "BodyGroups": 18446744073709551615,
+          "MaterialGroup": null,
+          "MaterialOverride": null,
+          "Model": "models/dev/box.vmdl",
+          "RenderType": "On",
+          "Tint": "0.35349,0.32061,0.32061,1"
+        },
+        {
+          "__type": "BoxCollider",
+          "Center": "0,0,0",
+          "IsTrigger": false,
+          "Scale": "50,50,50",
+          "Static": false,
+          "Surface": null
+        }
+      ]
+    },
+    {
+      "Id": "b5867d64-f120-468a-824d-f18eb4d58434",
+      "Name": "Conveyor (4)",
+      "Position": "176.5282,156.8117,6.625464",
+      "Scale": "6.120288,5.27125,0.7027502",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "ModelRenderer",
+          "BodyGroups": 18446744073709551615,
+          "MaterialGroup": null,
+          "MaterialOverride": null,
+          "Model": "models/dev/box.vmdl",
+          "RenderType": "On",
+          "Tint": "0.35349,0.32061,0.32061,1"
+        },
+        {
+          "__type": "BoxCollider",
+          "Center": "0,0,0",
+          "IsTrigger": false,
+          "Scale": "50,50,50",
+          "Static": false,
+          "Surface": null
+        }
+      ]
+    },
+    {
+      "Id": "6b93d1d9-d407-4b36-bd0c-bfc2039cc807",
+      "Name": "Conveyor (5)",
+      "Position": "-174.2001,-152.0961,6.625464",
+      "Scale": "6.120288,5.27125,0.7027502",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "ModelRenderer",
+          "BodyGroups": 18446744073709551615,
+          "MaterialGroup": null,
+          "MaterialOverride": null,
+          "Model": "models/dev/box.vmdl",
+          "RenderType": "On",
+          "Tint": "0.35349,0.32061,0.32061,1"
+        },
+        {
+          "__type": "BoxCollider",
+          "Center": "0,0,0",
+          "IsTrigger": false,
+          "Scale": "50,50,50",
+          "Static": false,
+          "Surface": null
+        }
+      ]
+    },
+    {
+      "Id": "bb9a49ae-463e-4f20-b746-b698571ce6b1",
+      "Name": "prop",
+      "Position": "7.37849,6.691193,147.9686",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Rigidbody",
+          "AngularDamping": 0.05,
+          "Gravity": true,
+          "LinearDamping": 0,
+          "Locking": {},
+          "MassOverride": 1,
+          "RigidbodyFlags": 0,
+          "StartAsleep": false
+        },
+        {
+          "__type": "ModelRenderer",
+          "BodyGroups": 18446744073709551615,
+          "MaterialGroup": null,
+          "MaterialOverride": null,
+          "Model": "models/sbox_props/watermelon/watermelon.vmdl",
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        },
+        {
+          "__type": "ModelCollider",
+          "IsTrigger": false,
+          "Model": "models/sbox_props/watermelon/watermelon.vmdl",
+          "Static": false,
+          "Surface": null
+        }
+      ]
+    }
+  ],
+  "SceneProperties": {
+    "FixedUpdateFrequency": 50,
+    "Lerping": true,
+    "MaxFixedUpdates": 5,
+    "NetworkFrequency": 30,
+    "ThreadedAnimation": true,
+    "TimeScale": 1,
+    "UseFixedUpdate": true,
+    "NavMesh": {
+      "Enabled": false,
+      "IncludeStaticBodies": true,
+      "IncludeKeyframedBodies": true,
+      "EditorAutoUpdate": true,
+      "AgentHeight": 64,
+      "AgentRadius": 16,
+      "AgentStepSize": 18,
+      "AgentMaxSlope": 40,
+      "ExcludedBodies": "",
+      "IncludedBodies": ""
+    }
+  },
+  "Title": "tycoon",
+  "Description": "",
+  "LastSaved": "2024-02-17T17:17:50.7672015\u002B01:00",
+  "__references": [
+    "facepunch.floor_grass_a",
+    "facepunch.watermelon"
+  ]
+}

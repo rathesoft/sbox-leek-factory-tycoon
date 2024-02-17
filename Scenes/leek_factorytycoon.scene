@@ -1,0 +1,181 @@
+{
+  "Id": "acfb06ce-9174-4f93-bef6-d0a48113968e",
+  "GameObjects": [
+    {
+      "Id": "678215da-b841-49e3-a295-9017a8b8a556",
+      "Name": "Map",
+      "Position": "2167.682,-335.3177,559.5408",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "MapInstance",
+          "MapName": "maps/leekfactory_tycoon.vpk",
+          "OnMapLoaded": null,
+          "OnMapUnloaded": null,
+          "UseMapFromLaunch": false
+        }
+      ],
+      "Children": []
+    },
+    {
+      "Id": "33103b96-5d49-4374-b8ce-36e0a5ecf70e",
+      "Name": "Conveyor",
+      "Position": "0,0,6.625464",
+      "Rotation": "0,0,0.7071067,0.7071068",
+      "Scale": "11.34438,13.15923,0.2982036",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "BoxCollider",
+          "Center": "0,0,0",
+          "IsTrigger": false,
+          "Scale": "50,50,50",
+          "Static": false,
+          "Surface": null
+        },
+        {
+          "__type": "ConveyorBelt",
+          "Direction": "Left",
+          "Speed": 3
+        }
+      ]
+    },
+    {
+      "Id": "2cd1c280-a803-4136-8652-50c96b745b5f",
+      "Name": "prop",
+      "Position": "7.37849,6.691193,147.9686",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Rigidbody",
+          "AngularDamping": 0.05,
+          "Gravity": true,
+          "LinearDamping": 0,
+          "Locking": {},
+          "MassOverride": 1,
+          "RigidbodyFlags": 0,
+          "StartAsleep": false
+        },
+        {
+          "__type": "ModelRenderer",
+          "BodyGroups": 18446744073709551615,
+          "MaterialGroup": null,
+          "MaterialOverride": null,
+          "Model": "models/sbox_props/watermelon/watermelon.vmdl",
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        },
+        {
+          "__type": "ModelCollider",
+          "IsTrigger": false,
+          "Model": "models/sbox_props/watermelon/watermelon.vmdl",
+          "Static": false,
+          "Surface": null
+        }
+      ]
+    },
+    {
+      "Id": "bba18ebd-949d-43d4-b10b-cf05cf7cc1b6",
+      "Name": "Main Camera",
+      "Position": "289.2542,-16.7262,1812.818",
+      "Rotation": "-0.0000001078764,-0.7071068,0.0000001078764,-0.7071068",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "CameraComponent",
+          "BackgroundColor": "0.33333,0.46275,0.52157,1",
+          "ClearFlags": "All",
+          "FieldOfView": 94.53,
+          "IsMainCamera": true,
+          "Orthographic": false,
+          "OrthographicHeight": 700,
+          "Priority": 1,
+          "RenderExcludeTags": "",
+          "RenderTags": "",
+          "TargetEye": "None",
+          "Viewport": "0,0,1,1",
+          "ZFar": 10000,
+          "ZNear": 10
+        },
+        {
+          "__type": "CameraController",
+          "MoveSpeed": 1000
+        }
+      ]
+    },
+    {
+      "Id": "6478f12b-1a19-4392-9d36-2f8019bae133",
+      "Name": "HUD",
+      "Position": "370.3558,715.4297,526.3963",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "ScreenPanel",
+          "AutoScreenScale": true,
+          "Opacity": 1,
+          "Scale": 1,
+          "ZIndex": 100
+        },
+        {
+          "__type": "RootUI"
+        }
+      ]
+    },
+    {
+      "Id": "be862f2b-2bd1-4f93-841b-a78ba54648bc",
+      "Name": "GameManager",
+      "Position": "370.3558,715.4297,526.3963",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "GameManager"
+        }
+      ]
+    },
+    {
+      "Id": "d0ba893b-8426-4d17-91cc-fa636ef38a73",
+      "Name": "Directional Light",
+      "Position": "1714.312,119.8279,567.5855",
+      "Rotation": "-0.2329629,0.5624222,0.3036032,0.732963",
+      "Tags": "light_directional,light",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "DirectionalLight",
+          "FogMode": "Enabled",
+          "FogStrength": 1,
+          "LightColor": "0.91373,0.98039,1,1",
+          "Shadows": true,
+          "SkyColor": "0.05882,0.07451,0.08235,1"
+        }
+      ]
+    }
+  ],
+  "SceneProperties": {
+    "FixedUpdateFrequency": 50,
+    "Lerping": true,
+    "MaxFixedUpdates": 5,
+    "NetworkFrequency": 30,
+    "ThreadedAnimation": true,
+    "TimeScale": 1,
+    "UseFixedUpdate": true,
+    "NavMesh": {
+      "Enabled": false,
+      "IncludeStaticBodies": true,
+      "IncludeKeyframedBodies": true,
+      "EditorAutoUpdate": true,
+      "AgentHeight": 64,
+      "AgentRadius": 16,
+      "AgentStepSize": 18,
+      "AgentMaxSlope": 40,
+      "ExcludedBodies": "",
+      "IncludedBodies": ""
+    }
+  },
+  "Title": "leek_factorytycoon",
+  "Description": "",
+  "LastSaved": "2024-02-17T18:52:15.3622511\u002B01:00",
+  "__references": [
+    "facepunch.watermelon"
+  ]
+}
